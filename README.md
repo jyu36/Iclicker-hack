@@ -1,5 +1,6 @@
 # no-early-nine
 This project is used for students who don't want to wake up for iclicker questions
+You must have selenium and python installed
 Do not modify any part of the code except strings
 I have added comments to all the places where you need personalization
 You will need:
