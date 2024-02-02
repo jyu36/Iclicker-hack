@@ -29,10 +29,10 @@ driver = webdriver.Chrome(options=chrome_options)
 service = Service(executable_path="./chromedriver")
 driver = webdriver.Chrome(service=service)
 
-# Set geolocation (input your own lattitude and longitude)
+# Set geolocation (input your own latitude and longitude)
 coordinates = {
-    "latitude": 39.3271792,
-    "longitude": -76.619946,
+    "latitude": 0,
+    "longitude": 0,
     "accuracy": 100
 }
 
@@ -43,20 +43,20 @@ driver.get("https://student.iclicker.com/#/login")
 time.sleep(2)
 login_email_input = driver.find_element(By.ID, "userEmail")
 login_email_input.clear()
-login_email_input.send_keys("jyu164@jh.edu" + Keys.ENTER)
+login_email_input.send_keys("INSERT USER NAME" + Keys.ENTER)
 
 time.sleep(2)
 login_password_input = driver.find_element(By.ID, "userPassword")
 login_password_input.clear()
-login_password_input.send_keys("Yujiaqiyujia36" + Keys.ENTER)
+login_password_input.send_keys("INSERT PASSWORD" + Keys.ENTER)
 
 
 # Input your class name here
 WebDriverWait(driver, 5).until(
-    EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "Mathematical Foundations"))
+    EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, "INSERT CLASS NAME"))
 )
 
-link = driver.find_element(By.PARTIAL_LINK_TEXT, "Mathematical Foundations")
+link = driver.find_element(By.PARTIAL_LINK_TEXT, "INSERT CLASS NAME")
 link.click()
 
 
